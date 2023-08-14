@@ -27,7 +27,7 @@ export default function Navbar() {
     
       window.addEventListener('resize', showButton);
 
-    return (
+    return (       
         <nav className='nav'>
             <div className='nav-container'>
                 <Link className='navbar-logo' to="section1">

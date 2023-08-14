@@ -1,5 +1,5 @@
 .nav {
-  background-color: red;
+  background-color: rgb(72, 40, 130);
   width: 100vw;
   height: 100px;
   display: flex;
@@ -8,6 +8,8 @@
   position: fixed;
   top: 0;
   z-index: 999;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  opacity: 0.93;
 }
 
 .nav-container {
@@ -52,6 +54,7 @@
 }
 
 .nav-links {
+    font-weight: 500;
   color: #fff;
   display: flex;
   align-items: center;
@@ -62,6 +65,7 @@
 }
 
 .nav-links:hover {
+    color: rgb(46, 172, 218);
   border-bottom: 4px solid #fff;
   transition: all 0.2s ease-out;
 }

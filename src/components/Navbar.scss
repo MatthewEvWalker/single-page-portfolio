@@ -1,5 +1,7 @@
 .nav {
-  background-color: rgb(72, 40, 130);
+  // background-color: rgb(72, 40, 130);
+  // background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+  background-color: #6bd3ff;
   width: 100vw;
   height: 100px;
   display: flex;
@@ -36,6 +38,11 @@
 .navbar-logo img {
   width: 50%;
   height: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-logo img:hover {
+  transform: scale(1.1);
 }
 
 .nav-menu {
@@ -65,7 +72,7 @@
 }
 
 .nav-links:hover {
-    color: rgb(46, 172, 218);
+  color: rgb(38, 51, 57);
   border-bottom: 4px solid #fff;
   transition: all 0.2s ease-out;
 }

@@ -1,33 +1,13 @@
-// .hero {
-//     background-color: rgb(253, 249, 249);
-//     border: limegreen 5px solid;
-//     height: 1500px;
-//     padding: 10px;
-// }
-
-// .main-container {
-//     margin-top: 200px;
-//     border: blue 5px solid;
-//     padding: 10px;
-// }
-
-// .splash-img {
-//     border: limegreen 5px solid;
-// }
-
-// .head-img {
-//     // margin-top: 100px;
-//     border: limegreen 5px solid;
-// }
-
-// h1 {
-//     color: rgb(0, 0, 0);
-//     // text-align: center;
-//     margin-top: 100px;
-// }
+h1 {
+  color: rgb(39, 39, 39);
+  font-size: 100px;
+  font-family: 'Noto Serif';
+  font-weight: 300;
+  text-align: center;
+}
 
 .hero {
-    background-color: rgb(197, 83, 83);
+    background-color: #fffafa;
     border: limegreen 5px solid;
     height: 900px;
     padding: 10px;
@@ -37,18 +17,19 @@
     // display: flex;
     // justify-content: center;
     // align-items: center;
-  }
+}
   
-  .splash-container {
-    margin-top: 200px;
+.splash-container {
+    // margin-bottom: 100px;
+    margin-top: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
     border: blue 5px solid;
     padding: 10px;
-  }
+}
 
-  .face-container {
+.face-container {
     margin-top: 100px;
     display: flex;
     flex-direction: column;
@@ -56,19 +37,33 @@
     justify-content: center;
     border: blue 5px solid;
     padding: 10px;
-  }
+}
+.splash-img {
+    border: limegreen 5px solid;
+    // background-color: rgb(85, 18, 122);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 100%; /* Adjust the width as needed */
+    // height: auto; /* Ensure the aspect ratio is maintained */
+    height: 100%;
+    flex: 1;
+    margin: 10px;
+    // position: relative;
+
+}
   
-  .splash-img,
-  .face-img {
+.face-img {
     border: limegreen 5px solid;
     width: 100%; /* Adjust the width as needed */
     // height: auto; /* Ensure the aspect ratio is maintained */
     height: 100%;
     flex: 1;
     margin: 10px;
-  }
+}
 
-  .face-img > img {
+.face-img > img {
     // border: limegreen 5px solid;
     width: 100%; /* Adjust the width as needed */
     // height: auto; /* Ensure the aspect ratio is maintained */
@@ -76,25 +71,20 @@
     object-fit: cover;
     flex: 0 1 auto;
     // margin: 10px;
-  }
-
-  
-  h1 {
-    color: rgb(0, 0, 0);
-    margin-top: 100px;
-  }
-  
-  .fa {
+    user-select: none;
+}
+ 
+.fa {
     font-size: 100px;
     color: rgb(217, 191, 191);
     transition: transform 0.2s ease-in-out;
-  }
+}
 
-  .fa:hover {
-    color: rgb(238, 228, 36);
+.fa:hover {
+    color: rgb(242, 232, 51);
     cursor: pointer;
-  }
+}
 
-  .bigger {
+.bigger {
     transform: scale(1.3)
-  }
+}

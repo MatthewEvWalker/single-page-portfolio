@@ -21,11 +21,11 @@ function Hero() {
     <section className="hero">
       <div className="splash-container">
         <div className="splash-img">
-          <h1>
-            Hi, my <br />
-            name is <b>Matthew</b>
-          </h1>
-          <h2>Testing</h2>
+            <h1>
+              Hi, my <br />
+              name is <b className="bold">Matthew</b>
+            </h1>
+            <h2>React Dev | Advanced Javascript Skills | Python Programmer </h2>
         </div>
       </div>
       <div className="face-container">

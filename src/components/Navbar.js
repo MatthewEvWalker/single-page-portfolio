@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+// import { Link, NavLink } from 'react-router-dom';
 import logoMW from '../assets/images/MW-logo_thumbnail.png';
-import { animateScroll as scroll } from 'react-scroll';
+import { Link, animateScroll as scroll } from 'react-scroll';
 import './Navbar.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import resume from "../assets/resume/resume.pdf"
+// import { download } from 'fontawesome';
 
 export default function Navbar() {
 
@@ -13,6 +17,16 @@ export default function Navbar() {
     const handleClick = () => setClick(!click)
     const closeMobileMenu = () => setClick(false)
 
+    
+    const downloadResume = () => {
+
+        const resumeURL = resume
+
+        window.open(resumeURL, '');
+    }
+    
+    // This is the hamburger menu that comes in at 960 pixels
+
     const showButton = () => {
         if (window.innerWidth <= 960) {
           setButton(false);
@@ -21,11 +35,13 @@ export default function Navbar() {
         }
       };
     
-      useEffect(() => {
+    useEffect(() => {
         showButton();
-      }, []);
+    }, []);
     
-      window.addEventListener('resize', showButton);
+    window.addEventListener('resize', showButton);
+
+
 
     return (       
         <nav className='nav'>
@@ -39,18 +55,20 @@ export default function Navbar() {
 
                 <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                     <li className='nav-item'>
-                        <NavLink exact="true" activeclassName='active' onClick={closeMobileMenu} className='nav-links'to="section1" smooth={true} duration={500} spy={true} offset={-80} >HOME</NavLink>
+                        <Link exact="true" activeclassName='active' onClick={closeMobileMenu} className='nav-links'to="section1" smooth={true} duration={500} spy={true} offset={-80} >HOME</Link>
                     </li>
                     <li className='nav-item'>
-                        <NavLink exact="true" activeclassName='active' onClick={closeMobileMenu} className='nav-links'to="/about" smooth={true} duration={500} spy={true} offset={-80}>ABOUT</NavLink>
+                        <Link exact="true" activeclassName='active' onClick={closeMobileMenu} className='nav-links'to="/about" smooth={true} duration={500} spy={true} offset={-80}>ABOUT</Link>
                     </li>
                     <li className='nav-item'>
-                        <NavLink exact="true" activeclassName='active' onClick={closeMobileMenu} className='nav-links'to="/social" smooth={true} duration={500} spy={true} offset={-80}>PROJECTS</NavLink>
+                        <Link exact="true" activeclassName='active' onClick={closeMobileMenu} className='nav-links'to="/social" smooth={true} duration={500} spy={true} offset={-80}>PROJECTS</Link>
                     </li>
                     <li className='nav-item'>
-                        <NavLink exact="true" activeclassName='active' onClick={closeMobileMenu} className='nav-links'to="/contact" smooth={true} duration={500} spy={true} offset={-80}>CONTACT</NavLink>
+                        <Link exact="true" activeclassName='active' onClick={closeMobileMenu} className='nav-links'to="/contact" smooth={true} duration={500} spy={true} offset={-80}>CONTACT</Link>
                     </li>
                 </ul> 
+                <FontAwesomeIcon icon={faDownload} className='cv' onClick={downloadResume}
+/>
             </div>
         </nav>
 

@@ -1,0 +1,13 @@
+.about {
+    // background-color: #fffafa;
+    background-color: #fbfbfb;
+    border: limegreen 5px solid;
+    height: 900px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr .75fr ;
+    grid-gap: 30px;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+}
